@@ -17,17 +17,16 @@ Backtesting & Eval	Custom Backtester & Matplotlib	Includes a professional backte
 📁 Project Structure
 
 .
-├── GOLD_15_data_mt5.csv         # Raw historical 15-minute GOLD data (example)
-├── gold_15m_data_final_features.csv # Cleaned and feature-engineered dataset
-├── ppo_trading_agent_gold_advanced.zip # Trained PPO model artifact
-├── main.py                      # Data acquisition script (Fetches data from MT5)
-├── feature_engineering.py       # Creates all technical indicators and scales features
-├── trading_env.py               # Defines the custom RL environment (Gymnasium)
-├── train_agent.py               # Loads data, trains the PPO agent, and validates performance
-├── evaluate_agent.py            # Evaluates the trained agent on unseen data
-├── backtester.py                # A traditional backtester for non-RL strategy comparison
-├── live_trader.py               # Connects to MT5 to execute trades in real-time
-└── run_project.py               # Orchestrates the data -> train -> evaluate workflow
+├── backtester.py              # Traditional, rule-based backtester for performance comparison.
+├── evaluate_agent.py          # Script to run the trained model on unseen validation data and plot results.
+├── feature_engineering.py     # **Core Data Prep:** Calculates all technical features and scales them.
+├── live_trader.py             # **Deployment Script:** Connects to MT5, gets live data, and executes trades.
+├── main.py                    # Data Acquisition: Fetches historical GOLD data from MT5.
+├── run_project.py             # Workflow Orchestration: Automates the entire data -> train -> evaluate sequence.
+├── trading_env.py             # Defines the custom Gymnasium environment for RL training.
+├── train_agent.py             # Trains the PPO agent and performs a validation run.
+├── ppo_trading_agent_gold_advanced.zip # (Output) Saved artifact of the trained PPO model.
+└── gold_15m_data_final_features.csv    # (Output) Final, preprocessed dataset used for training.
 
 ⚙️ How to Run the Project
 
