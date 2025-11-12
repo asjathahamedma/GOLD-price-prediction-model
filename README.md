@@ -16,17 +16,7 @@ Backtesting & Eval	Custom Backtester & Matplotlib	Includes a professional backte
 
 📁 Project Structure
 
-File,Purpose
-main.py,Data Acquisition: Connects to MT5 to fetch raw historical GOLD price data.
-feature_engineering.py,"Data Preparation: Calculates all technical indicators (RSI, S/R, Stochastic, etc.) and scales features using StandardScaler."
-trading_env.py,"RL Environment: Defines the custom gymnasium.Env for the agent, including state, action (Hold, Buy, Sell), and reward logic."
-train_agent.py,"Model Training: Splits data, trains the PPO agent on the training set, saves the model, and performs an initial validation run."
-evaluate_agent.py,"Model Evaluation: Loads the trained PPO model and runs it on unseen validation data, plotting the net worth curve."
-backtester.py,"Benchmarking: Implements a non-RL, traditional strategy backtester to compare performance metrics against the AI agent."
-live_trader.py,"Deployment: Connects to the live MT5 terminal, fetches real-time data, and uses the trained PPO model to execute trades."
-run_project.py,Orchestration: Automates the complete workflow: feature engineering → training → evaluation.
-ppo_trading_agent_gold_advanced.zip,"Model Artifact: The saved, trained PPO agent."
-gold_15m_data_final_features.csv,"Dataset: The final, scaled dataset used to train the RL agent."
+FilePurposemain.py**Data Acquisition:** Connects to MT5 to fetch raw historical GOLD price data.feature\_engineering.py**Data Preparation:** Calculates all technical indicators (RSI, S/R, Stochastic, etc.) and scales features using StandardScaler.trading\_env.py**RL Environment:** Defines the custom gymnasium.Env for the agent, including state, action (Hold, Buy, Sell), and reward logic.train\_agent.py**Model Training:** Splits data, trains the **PPO** agent on the training set, saves the model, and performs an initial validation run.evaluate\_agent.py**Model Evaluation:** Loads the trained PPO model and runs it on unseen validation data, plotting the net worth curve.backtester.py**Benchmarking:** Implements a non-RL, traditional strategy backtester to compare performance metrics against the AI agent.live\_trader.py**Deployment:** Connects to the live MT5 terminal, fetches real-time data, and uses the trained PPO model to execute trades.run\_project.py**Orchestration:** Automates the complete workflow: feature engineering → training → evaluation.ppo\_trading\_agent\_gold\_advanced.zip**Model Artifact:** The saved, trained PPO agent.gold\_15m\_data\_final\_features.csv**Dataset:** The final, scaled dataset used to train the RL agent.
 
 ⚙️ How to Run the Project
 
