@@ -15,8 +15,17 @@ Data Processing	Pandas, NumPy, Scikit-learn	Used for data cleaning, creating adv
 Backtesting & Eval	Custom Backtester & Matplotlib	Includes a professional backtester for traditional strategies and a separate evaluation script for the AI agent, complete with performance plotting.
 
 📁 Project Structure
-
-FilePurposemain.py\*\*Data Acquisition:\*\* Connects to MT5 to fetch raw historical GOLD price data.feature\\\_engineering.py\*\*Data Preparation:\*\* Calculates all technical indicators (RSI, S/R, Stochastic, etc.) and scales features using StandardScaler.trading\\\_env.py\*\*RL Environment:\*\* Defines the custom gymnasium.Env for the agent, including state, action (Hold, Buy, Sell), and reward logic.train\\\_agent.py\*\*Model Training:\*\* Splits data, trains the \*\*PPO\*\* agent on the training set, saves the model, and performs an initial validation run.evaluate\\\_agent.py\*\*Model Evaluation:\*\* Loads the trained PPO model and runs it on unseen validation data, plotting the net worth curve.backtester.py\*\*Benchmarking:\*\* Implements a non-RL, traditional strategy backtester to compare performance metrics against the AI agent.live\\\_trader.py\*\*Deployment:\*\* Connects to the live MT5 terminal, fetches real-time data, and uses the trained PPO model to execute trades.run\\\_project.py\*\*Orchestration:\*\* Automates the complete workflow: feature engineering → training → evaluation.ppo\\\_trading\\\_agent\\\_gold\\\_advanced.zip\*\*Model Artifact:\*\* The saved, trained PPO agent.gold\\\_15m\\\_data\\\_final\\\_features.csv\*\*Dataset:\*\* The final, scaled dataset used to train the RL agent.
+.
+├── backtester.py              # Traditional, rule-based backtester for performance comparison.
+├── evaluate_agent.py          # Script to run the trained model on unseen validation data and plot results.
+├── feature_engineering.py     # **Core Data Prep:** Calculates all technical features and scales them.
+├── live_trader.py             # **Deployment Script:** Connects to MT5, gets live data, and executes trades.
+├── main.py                    # Data Acquisition: Fetches historical GOLD data from MT5.
+├── run_project.py             # Workflow Orchestration: Automates the entire data -> train -> evaluate sequence.
+├── trading_env.py             # Defines the custom Gymnasium environment for RL training.
+├── train_agent.py             # Trains the PPO agent and performs a validation run.
+├── ppo_trading_agent_gold_advanced.zip # (Output) Saved artifact of the trained PPO model.
+└── gold_15m_data_final_features.csv    # (Output) Final, preprocessed dataset used for training.
 
 ⚙️ How to Run the Project
 
