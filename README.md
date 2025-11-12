@@ -15,17 +15,22 @@ Data Processing	Pandas, NumPy, Scikit-learn	Used for data cleaning, creating adv
 Backtesting & Eval	Custom Backtester & Matplotlib	Includes a professional backtester for traditional strategies and a separate evaluation script for the AI agent, complete with performance plotting.
 
 📁 Project Structure
-.
-├── backtester.py              # Traditional, rule-based backtester for performance comparison.
-├── evaluate_agent.py          # Script to run the trained model on unseen validation data and plot results.
-├── feature_engineering.py     # **Core Data Prep:** Calculates all technical features and scales them.
-├── live_trader.py             # **Deployment Script:** Connects to MT5, gets live data, and executes trades.
-├── main.py                    # Data Acquisition: Fetches historical GOLD data from MT5.
-├── run_project.py             # Workflow Orchestration: Automates the entire data -> train -> evaluate sequence.
-├── trading_env.py             # Defines the custom Gymnasium environment for RL training.
-├── train_agent.py             # Trains the PPO agent and performs a validation run.
-├── ppo_trading_agent_gold_advanced.zip # (Output) Saved artifact of the trained PPO model.
-└── gold_15m_data_final_features.csv    # (Output) Final, preprocessed dataset used for training.
+{content: }
+
+Use code with caution.
+File Name	Description
+backtester.py	Traditional, rule-based backtester for performance comparison.
+evaluate_agent.py	Script to run the trained model on unseen validation data and plot results.
+feature_engineering.py	Core Data Prep: Calculates all technical features and scales them.
+live_trader.py	Deployment Script: Connects to MT5, gets live data, and executes trades.
+main.py	Data Acquisition: Fetches historical GOLD data from MT5.
+run_project.py	Workflow Orchestration: Automates the entire data -> train -> evaluate sequence.
+trading_env.py	Defines the custom Gymnasium environment for RL training.
+train_agent.py	Trains the PPO agent and performs a validation run.
+ppo_trading_agent_gold_advanced.zip	(Output) Saved artifact of the trained PPO model.
+gold_15m_data_final_features.csv	(Output) Final, preprocessed dataset used for training.
+
+{content: }
 
 ⚙️ How to Run the Project
 
